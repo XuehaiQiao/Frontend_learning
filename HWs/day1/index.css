@@ -1,0 +1,109 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f0f0f0;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Form styles */
+  
+  .forms {
+    margin-top: 30px;
+  }
+  
+  .forms div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .forms input {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid blue;
+  }
+
+  .forms input:hover {
+    outline:3px lightblue solid;
+  }
+  
+  /* Agreement styles */
+  
+  .Agreement {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .Agreement #checkbox {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .Agreement #notice {
+    flex: 7;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px;
+  }
+  
+  .Agreement #register_text {
+    padding: 3px 5px;
+    border-radius: 5px;
+    background-color: rgb(61, 127, 191);
+    color: #fff;
+  }
+  
+  /* Button styles */
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .buttons button {
+    flex: 1;
+    width: 150px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+  }
+
+  #button1 {
+    background-color: rgb(61, 127, 191);
+  }
+  #button2 {
+    background-color: rgb(87, 141, 90);
+  }
+  
+  .buttons button:hover {
+    color: #000;
+  }
+
+
+  
