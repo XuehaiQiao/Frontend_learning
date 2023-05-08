@@ -41,7 +41,8 @@
   }
 
   .forms input:hover {
-    outline:3px lightblue solid;
+    outline: 3px lightblue solid;
+    
   }
   
   /* Agreement styles */
