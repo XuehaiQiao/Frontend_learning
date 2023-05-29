@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "content": "Walk the dog",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "content": "Play golf",
+      "completed": true,
+      "id": 2
+    },
+    {
+      "content": "Finish React-todo project",
+      "completed": true,
+      "id": 3
+    },
+    {
+      "content": "Watch NBA playoffs",
+      "completed": false,
+      "id": 4
+    }
+  ]
+}
