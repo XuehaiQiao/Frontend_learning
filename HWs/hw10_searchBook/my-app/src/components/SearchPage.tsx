@@ -1,14 +1,19 @@
 import { useState } from 'react';
 import { fetchBooks } from '../API/api';
-import { Book } from "../typs";
+import { Book, PaginationProps } from "../typs";
 import { addBook } from '../redux/wishlistReducer';
 import { useDispatch } from 'react-redux';
+import Pagination from './Pagination';
 
 function SearchPage() {
     const [books, setBooks] = useState<Book[]>([]);
     const [loading, setLoading] = useState(false);
     const [query, setQuery] = useState('');
     const [error, setError] = useState<string>('');
+
+    const [totalPages, setTotalPages] = useState(0);
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 20;
 
     const dispatch = useDispatch();
     const containerStyle: React.CSSProperties = {
@@ -31,12 +36,22 @@ function SearchPage() {
 
         setTimeout(() => {
             // Call the fetchBooks function from your API file with the query
-            fetchBooks(q)
-                .then((data) => setBooks(data))
+            fetchBooks(q, (currentPage - 1) * itemsPerPage, itemsPerPage)
+                .then((data) => {
+                    setTotalPages(Math.ceil(data.totalItems / itemsPerPage));
+                    setBooks(data.items)
+                })
                 .catch((error) => setError(error.message))
                 .finally(() => setLoading(false));
         }, 1000);
     }
+
+    const handlePageChange = (pageNumber: number) => {
+        if(pageNumber < 1) pageNumber = 1;
+        if(pageNumber > totalPages) pageNumber = totalPages;
+        setCurrentPage(pageNumber);
+        onSubmit(query);
+    };
 
     // Render the books in your component
     return (
@@ -60,6 +75,11 @@ function SearchPage() {
                         <button onClick={() => handleAddToWishlist(book)} >Add</button>
                     </div>
                 ))}
+            <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}
+            />
         </div>
     );
 }

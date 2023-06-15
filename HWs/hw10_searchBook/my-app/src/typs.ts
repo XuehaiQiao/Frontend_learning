@@ -25,3 +25,14 @@ export interface RemoveBookAction {
 }
 
 export type WishlistAction = AddBookAction | RemoveBookAction;
+
+export type PaginationProps = {
+    currentPage: number;
+    totalPages: number;
+    onPageChange: (pageNumber: number) => void;
+};
+
+export type FetchedData = {
+    totalItems: number;
+    items: Book[];
+}
