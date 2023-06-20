@@ -3,7 +3,7 @@ interface opt {
     trailing: boolean;
 }
 
-function debounce(func: Function, wait: number, options: opt) {
+function myDebounce(func: Function, wait: number, options: opt) : Function {
     let leading = ((options.leading === undefined) || !options.leading) ? false : true;
     //let trailing = ((options.trailing === undefined) || options.trailing) ? true : false;
     let timerId: ReturnType<typeof setTimeout>;
@@ -18,3 +18,5 @@ function debounce(func: Function, wait: number, options: opt) {
         }, wait);
     };
 }
+
+export default myDebounce;
