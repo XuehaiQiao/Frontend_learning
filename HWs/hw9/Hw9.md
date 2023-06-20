@@ -1,0 +1,10 @@
+# Hw9
+
+1. Virtual DOM vs real DOM, diffing algorithm, and reconciliation: Virtual DOM is a lightweight copy of the real DOM used by React. The diffing algorithm compares previous and new virtual DOMs to identify minimal changes, and reconciliation applies those changes to the real DOM. React uses virtual DOM for efficient updates, reducing direct manipulations of the real DOM.
+2. React lifecycle methods: Mounting, updating, and unmounting stages. These methods allow us to initialize state, make API requests, update the UI, or clean up resources during different lifecycle stages of a component.
+3. Using the key attribute in JSX: The key attribute helps React efficiently update and reorder components rendered from a list by providing a unique identifier for each item.
+4. Triggering component update: Component updates occur when props or state change. Calling `forceUpdate()` explicitly triggers a re-render.
+5. HOC (Higher-Order Component) and higher-order function: HOC is a pattern where a function takes a component and returns an enhanced component. Higher-order functions are regular JavaScript functions that take functions as arguments and return new functions. HOCs in React are implemented using higher-order functions, allowing code reuse and composability.
+6. Custom hooks: Custom hooks in React are functions that extract reusable logic from components, enabling code sharing without duplication. They handle stateful logic like data fetching or state management.
+7. The "children" prop: The reserved "children" prop in React is used to pass content between opening and closing tags of a component, allowing composition of child components or content within a parent component.
+8. React.memo, useMemo, useCallback: React.memo is a higher-order component that memoizes a component's rendering result. useMemo memoizes a function's result to avoid unnecessary re-computations. useCallback memoizes a callback function, useful for passing callbacks to child components to prevent unnecessary re-renders.
