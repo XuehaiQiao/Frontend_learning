@@ -2,7 +2,6 @@ import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { configureStore, EnhancedStore, AnyAction, Reducer } from "@reduxjs/toolkit";
 import { RootState } from "../redux/store";
-import { initWishlist } from "../redux/slices/wishlistSlice";
 import Wishlist from "../pages/Wishlist";
 
 
