@@ -1,0 +1,89 @@
+.calculator {
+    width: 400px;
+    height: 600px;
+    background-color: #333333;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font: 1.5em sans-serif;
+    color: white;
+}
+
+.display {
+    grid-row: span 1;
+    grid-column: span 4;
+    color: #ffffff;
+    text-align: right;
+    margin: 10px;
+    font:60px sans-serif;
+}
+
+.number {
+    background-color: rgb(121, 121, 121);
+}
+
+.operation {
+    background-color: rgb(220, 127, 27);
+}
+
+.top-left {
+    background-color: rgb(80, 75, 75);
+}
+
+#ac {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+#sign {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+#percent {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+/* <div className='button' id='divid'>/</div>
+<div className='button' id='multi'>X</div>
+<div className='button' id='minus'>-</div>
+<div className='button' id='plus'>+</div>
+<div className='button' id='equal'>=</div> */
+
+#divid {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+}
+#multi {
+    grid-row: 3 / 4;
+    grid-column: 4 / 5;
+}
+#minus {
+    grid-row: 4 / 5;
+    grid-column: 4 / 5;
+}
+#plus {
+    grid-row: 5 / 6;
+    grid-column: 4 / 5;
+}
+#equal {
+    grid-row: 6 / 7;
+    grid-column: 4 / 5;
+}
+
+#zero {
+    grid-column: span 2;
+}
+
+.button:active {
+    background-color: rgb(220, 220, 220);
+}
